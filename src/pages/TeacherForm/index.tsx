@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import PageHeader from '../../components/PageHeader';
 
 import Input from '../../components/Input';
@@ -10,6 +10,14 @@ import warningIcon from '../../assets/images/icons/warning.svg';
 import './styles.css';
 
 const TeacherForm: React.FC = () => {
+  const [scheduleItems, setScheduleItems] = useState([
+    { week_day: 0, from: '', to: '', }
+  ]);
+
+  const addNewScheduleItem = useCallback(() => {
+    setScheduleItems([...scheduleItems])
+  }, [scheduleItems])
+
   return (
     <div id="page-teacher-form" className="container">
       <PageHeader 
@@ -49,30 +57,32 @@ const TeacherForm: React.FC = () => {
         <fieldset>
           <legend>
             Horários disponíveis
-            <button type="button">
+            <button type="button" onClick={addNewScheduleItem}>
               + Novo horário
             </button>
           </legend>
 
-          <div className="schedule-item">
-          <Select 
-            name="subject" 
-            label="Matéria"
-            options={[
-              { value: 'Artes', label: 'Artes' },
-              { value: 'Biologia', label: 'Biologia' },
-              { value: 'Ciências', label: 'Ciências' },
-              { value: 'Educação Física', label: 'Educação Física' },
-              { value: 'Física', label: 'Física' },
-              { value: 'Geografia', label: 'Geografia' },
-              { value: 'Português', label: 'Português' },
-              { value: 'Matemática', label: 'Matemática' },
-              { value: 'Química', label: 'Química' },
-            ]}
-          />
-          <Input name="from" label="Das" type="time" />
-          <Input name="to" label="Até" type="time" />
-          </div>
+          {scheduleItems.map(scheduleItem => (
+            <div key={scheduleItem.week_day} className="schedule-item">
+            <Select 
+              name="subject" 
+              label="Matéria"
+              options={[
+                { value: 'Artes', label: 'Artes' },
+                { value: 'Biologia', label: 'Biologia' },
+                { value: 'Ciências', label: 'Ciências' },
+                { value: 'Educação Física', label: 'Educação Física' },
+                { value: 'Física', label: 'Física' },
+                { value: 'Geografia', label: 'Geografia' },
+                { value: 'Português', label: 'Português' },
+                { value: 'Matemática', label: 'Matemática' },
+                { value: 'Química', label: 'Química' },
+              ]}
+            />
+            <Input name="from" label="Das" type="time" />
+            <Input name="to" label="Até" type="time" />
+            </div>
+          ))}
         </fieldset>
 
         <footer>
