@@ -1,19 +1,19 @@
-import React, { InputHTMLAttributes } from 'react';
+import React, { TextareaHTMLAttributes } from 'react';
 
 import './styles.css';
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   name: string;
   label: string;
 }
 
-const Input: React.FC<InputProps> = ({ label, name, ...rest }) => {
+const Textarea: React.FC<TextareaProps> = ({ label, name, ...rest }) => {
   return (
-    <div className="input-block">
+    <div className="textarea-block">
       <label htmlFor={name}>{label}</label>
-      <input type="text" id={name} {...rest} />
+      <textarea id={name} {...rest} />
     </div>
   );
 }
 
-export default Input;
+export default Textarea;
