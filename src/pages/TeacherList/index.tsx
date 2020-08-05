@@ -13,19 +13,19 @@ const TeacherList: React.FC = () => {
       <PageHeader title="Estes são os proffys disponíveis">
         <form id="search-teachers">
             <Select 
-            name="subject" 
-            label="Matéria"
-            options={[
-              { value: 'Artes', label: 'Artes' },
-              { value: 'Biologia', label: 'Biologia' },
-              { value: 'Ciências', label: 'Ciências' },
-              { value: 'Educação Física', label: 'Educação Física' },
-              { value: 'Física', label: 'Física' },
-              { value: 'Geografia', label: 'Geografia' },
-              { value: 'Português', label: 'Português' },
-              { value: 'Matemática', label: 'Matemática' },
-              { value: 'Química', label: 'Química' },
-            ]}
+              name="subject" 
+              label="Matéria"
+              options={[
+                { value: 'Artes', label: 'Artes' },
+                { value: 'Biologia', label: 'Biologia' },
+                { value: 'Ciências', label: 'Ciências' },
+                { value: 'Educação Física', label: 'Educação Física' },
+                { value: 'Física', label: 'Física' },
+                { value: 'Geografia', label: 'Geografia' },
+                { value: 'Português', label: 'Português' },
+                { value: 'Matemática', label: 'Matemática' },
+                { value: 'Química', label: 'Química' },
+              ]}
             />
             <Select 
             name="week-day" 
