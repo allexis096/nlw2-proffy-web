@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  text-align: center;
   margin-bottom: 1.2rem;
 
   img {
@@ -15,6 +16,7 @@ export const Container = styled.div`
   }
 
   @media (min-width: 1100px) {
+    text-align: initial;
     grid-area: logo;
     align-self: center;
     margin: 0;

@@ -1,13 +1,24 @@
 import React from 'react';
 
 import backgroundLogo from '../../assets/images/success-background.svg';
+import LogoContainer from '../../components/LogoContainer';
+
+import InputSign from '../../components/InputSign';
+
+import { Container, PageSignIn, InputLogin } from './styles';
 
 const SignIn: React.FC = () => {
   return (
-    <>
-    <img src={backgroundLogo} alt="Background"/>
-    <h1>SignIn</h1>
-    </>
+    <PageSignIn>
+      <Container>
+        <img src={backgroundLogo} alt="Background"/>
+        <LogoContainer />
+      </Container>
+      <InputLogin>
+        <InputSign name="E-mail" label="E-mail" />
+        <InputSign name="Senha" label="Senha" />
+      </InputLogin>
+    </PageSignIn>
   )
 }
 
