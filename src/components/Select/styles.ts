@@ -4,7 +4,7 @@ export const SelectBlock = styled.div`
   position: relative;
 
   & + div {
-    margin-top: 1.4rem;
+    /* margin-top: 1.4rem; */
   }
 
   label {
