@@ -10,7 +10,8 @@ import warningIcon from '../../assets/images/icons/warning.svg';
 
 import api from '../../services/api';
 
-import './styles.css';
+// import './styles.css';
+import { PageTeacherForm, MainForm, FooterForm } from './styles';
 
 const TeacherForm: React.FC = () => {
   const history = useHistory();
@@ -65,13 +66,13 @@ const TeacherForm: React.FC = () => {
   }, [avatar, bio, cost, history, name, scheduleItems, subject, whatsapp]);
 
   return (
-    <div id="page-teacher-form" className="container">
+    <PageTeacherForm id="page-teacher-form" className="container">
       <PageHeader 
         title="Que incrível que você quer dar aulas"
         description="O primeiro passo é preencher esse formulário de inscrição"
       />
 
-      <main>
+      <MainForm>
         <form onSubmit={handleCreateClass}>
           <fieldset>
             <legend>Seus dados</legend>
@@ -171,7 +172,7 @@ const TeacherForm: React.FC = () => {
             ))}
           </fieldset>
 
-          <footer>
+          <FooterForm>
             <p>
               <img src={warningIcon} alt="Aviso importante"/>
               Importante <br />
@@ -180,10 +181,10 @@ const TeacherForm: React.FC = () => {
             <button type="submit">
               Salvar cadastro
             </button>
-          </footer>
+          </FooterForm>
         </form>
-      </main>
-    </div>
+      </MainForm>
+    </PageTeacherForm>
   );
 }
 

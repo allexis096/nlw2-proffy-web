@@ -14,7 +14,7 @@ interface PageHeaderProps {
 
 const PageHeader: React.FC<PageHeaderProps> = ({ children, title, description }) => {
   return (
-    <PageHeaderDiv >
+    <PageHeaderDiv>
         <TopBarContainer>
           <Link to="/">
             <img src={backIcon} alt="Voltar"/>
@@ -22,7 +22,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ children, title, description })
           <img src={logoImg} alt="Proffy"/>
         </TopBarContainer>
 
-        <HeaderContent>
+        <HeaderContent className="headerForm">
           <strong>{title}</strong>
           { description && <p>{description}</p> }
           {children}
