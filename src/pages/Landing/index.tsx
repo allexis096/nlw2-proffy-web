@@ -18,8 +18,6 @@ import {
   ButtonsContainer, 
   TotalConnections } from './styles';
 
-import './styles.css';
-
 const Landing: React.FC = () => {
   const [totalConnections, setTotalConnections] = useState(0);
 

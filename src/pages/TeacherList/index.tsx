@@ -7,7 +7,6 @@ import Select from '../../components/Select';
 
 import api from '../../services/api';
 
-import './styles.css';
 import { PageTeacherList, SearchTeachers } from './styles';
 
 const TeacherList: React.FC = () => {

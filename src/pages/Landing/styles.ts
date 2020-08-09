@@ -40,7 +40,7 @@ export const HeroImage = styled.img`
 
 export const LogoContainer = styled.div`
   text-align: center;
-  margin-bottom: 3.2rem;
+  margin-bottom: 1.2rem;
 
   img {
     height: 10rem;

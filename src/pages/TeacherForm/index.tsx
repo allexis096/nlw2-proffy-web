@@ -10,7 +10,6 @@ import warningIcon from '../../assets/images/icons/warning.svg';
 
 import api from '../../services/api';
 
-// import './styles.css';
 import { PageTeacherForm, MainForm, FooterForm } from './styles';
 
 const TeacherForm: React.FC = () => {
