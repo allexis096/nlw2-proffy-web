@@ -56,8 +56,8 @@ export default createGlobalStyle`
     font: 500 1.6rem Poppins;
   }
 
-  .container {
+  /* .container {
     width: 90vw;
     max-width: 1100px;
-  }
+  } */
 `;

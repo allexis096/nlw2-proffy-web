@@ -8,6 +8,7 @@ import Select from '../../components/Select';
 import api from '../../services/api';
 
 import './styles.css';
+import { PageTeacherList, SearchTeachers } from './styles';
 
 const TeacherList: React.FC = () => {
   const [teachers, setTeachers] = useState([]);
@@ -32,9 +33,9 @@ const TeacherList: React.FC = () => {
   }, [subject, time, week_day]);
 
   return (
-    <div id="page-teacher-list" className="container">
+    <PageTeacherList className="container">
       <PageHeader title="Estes são os proffys disponíveis">
-        <form id="search-teachers" onSubmit={searchTeachers}>
+        <SearchTeachers id="search-teachers" onSubmit={searchTeachers}>
             <Select 
               name="subject" 
               label="Matéria"
@@ -78,7 +79,7 @@ const TeacherList: React.FC = () => {
           <button type="submit">
             Buscar
           </button>
-        </form>
+        </SearchTeachers>
       </PageHeader>
 
       <main>
@@ -86,7 +87,7 @@ const TeacherList: React.FC = () => {
           <TeacherItem key={teacher.id} teacher={teacher} />
         ))}
       </main>
-    </div>
+    </PageTeacherList>
   );
 }
 

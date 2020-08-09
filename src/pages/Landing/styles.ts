@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const PageLandingContent = styled.div`
+    width: 90vw;
+    max-width: 1100px;
+  
   @media (min-width: 1100px) {
-
     max-width: 1100px;
 
     display: grid;
