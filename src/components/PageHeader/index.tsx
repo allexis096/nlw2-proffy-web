@@ -14,15 +14,15 @@ interface PageHeaderProps {
 
 const PageHeader: React.FC<PageHeaderProps> = ({ children, title, description }) => {
   return (
-    <PageHeaderDiv className="page-header">
-        <TopBarContainer className="top-bar-container">
+    <PageHeaderDiv >
+        <TopBarContainer>
           <Link to="/">
             <img src={backIcon} alt="Voltar"/>
           </Link>
           <img src={logoImg} alt="Proffy"/>
         </TopBarContainer>
 
-        <HeaderContent className="header-content">
+        <HeaderContent>
           <strong>{title}</strong>
           { description && <p>{description}</p> }
           {children}
