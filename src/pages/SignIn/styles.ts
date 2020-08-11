@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
 export const PageSignIn = styled.div`
-
+  @media (min-width: 1100px) {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  }
 `;
 
 export const HeaderLogin = styled.header`
@@ -46,6 +50,25 @@ export const Container = styled.div`
       max-width: 300px;
     }
   }
+
+  @media (min-width: 1100px) {
+    width: 768px;
+    height: 100vh;
+
+    img {
+      width: 100%;
+    }
+
+    > div {
+      width: 50%;
+      margin-left: 24%;
+      margin-top: -180px;
+
+      h2 {
+        max-width: 320px;
+      }
+    }
+  }
 `;
 
 export const InputLogin = styled.div`
@@ -69,6 +92,10 @@ export const InputLogin = styled.div`
     &:hover {
       background: var(--color-secundary-dark);
     }
+  }
+
+  @media (min-width: 1100px) {
+    margin: 130px auto 0;
   }
 `;
 
