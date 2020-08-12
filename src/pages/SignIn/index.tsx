@@ -33,7 +33,7 @@ const SignIn: React.FC = () => {
             <input name="checkbox" type="checkbox" />
             <label htmlFor="checkbox">Lembrar-me</label>
           </div>
-          <a href="/">Esqueci Minha senha</a>
+          <a href="/">Esqueci minha senha</a>
         </InputConfigs>
         
         <button type="button">Entrar</button>

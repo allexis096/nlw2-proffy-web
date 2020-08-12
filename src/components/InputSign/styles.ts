@@ -33,13 +33,13 @@ export const InputBlock = styled.div`
   }
   
   :focus-within::after {
-    width: calc(100% - 6.8rem);
+    transform: rotate(90deg);
+    width: calc(100% - 54rem);
     height: 2px;
     content: '';
     background: var(--color-primary-light);
     position: absolute;
-    left: 3.4rem;
-    right: 3.4rem;
-    bottom: 0;
+    left: 15px;
+    top: 12px;
   }
 `;
