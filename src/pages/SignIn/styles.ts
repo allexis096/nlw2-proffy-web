@@ -1,10 +1,16 @@
 import styled from 'styled-components';
+import backgroundLogo from '../../assets/images/success-background.svg';
 
 export const PageSignIn = styled.div`
-  @media (min-width: 1100px) {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  @media (min-width: 1024px) {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: row;
 
     input {
       width: 400px;
@@ -16,7 +22,7 @@ export const HeaderLogin = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4.0rem 3.0rem 2.0rem;
+  padding: 0.5rem 3.0rem 2.0rem;
 
   h2 {
     color: var(--color-text-title);
@@ -32,7 +38,7 @@ export const HeaderLogin = styled.header`
     }
   }
 
-  @media (min-width: 1100px) {
+  @media (min-width: 1024px) {
     padding: 3rem 0;
 
     a {
@@ -44,28 +50,24 @@ export const HeaderLogin = styled.header`
 `;
 
 export const Container = styled.div`
-  max-width: 1100px;
   width: 100vw;
   height: 50vh;
-  background: var(--color-primary);
+  
+  background-image: url(${backgroundLogo});
+  background-size: 100%;
+  background-color: var(--color-primary);
 
-  img {
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    color: var(--color-text-in-primary);
+    max-width: 300px;
+    margin: 0 auto;
   }
 
-  > div {
-    margin-top: -33%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    h2 {
-      color: var(--color-text-in-primary);
-      max-width: 300px;
-    }
-  }
-
-  @media (min-width: 1100px) {
+  @media (min-width: 1024px) {
     width: 768px;
     height: 100vh;
 
@@ -85,9 +87,7 @@ export const Container = styled.div`
   }
 `;
 
-export const InputLogin = styled.div`
-  height: 50vh;
-
+export const InputLogin = styled.section`
   button {
     width: 90%;
     height: 5.6rem;
@@ -108,7 +108,7 @@ export const InputLogin = styled.div`
     }
   }
 
-  @media (min-width: 1100px) {
+  @media (min-width: 1024px) {
     margin: 130px auto 0;
 
     label {
@@ -125,7 +125,7 @@ export const InputConfigs = styled.footer`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2.0rem 3.0rem 3.0rem;
+  padding: 1.5rem 3.0rem;
   color: var(--color-text-complement);
 
   div {
@@ -149,11 +149,31 @@ export const InputConfigs = styled.footer`
     }
   }
 
-  @media (min-width: 1100px) {
+  @media (min-width: 1024px) {
     padding: 3rem 0;
 
     a {
       font-size: 1.4rem;
+    }
+  }
+`;
+
+export const InputRegister = styled.footer`
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+
+  .register {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      font-weight: bold;
+      color: var(--color-primary);
+
+      :hover {
+        color: var(--color-primary-dark);
+      }
     }
   }
 `;

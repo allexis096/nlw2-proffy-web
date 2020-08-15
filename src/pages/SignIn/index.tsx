@@ -1,28 +1,28 @@
 import React from 'react';
 
-import backgroundLogo from '../../assets/images/success-background.svg';
 import LogoContainer from '../../components/LogoContainer';
 
 import InputSign from '../../components/InputSign';
+
+import purpleHeart from '../../assets/images/icons/purple-heart.svg'
 
 import { 
   Container, 
   PageSignIn, 
   InputLogin, 
   HeaderLogin, 
-  InputConfigs } from './styles';
+  InputConfigs,
+  InputRegister } from './styles';
 
 const SignIn: React.FC = () => {
   return (
     <PageSignIn>
       <Container>
-        <img src={backgroundLogo} alt="Background"/>
         <LogoContainer />
       </Container>
       <InputLogin>
         <HeaderLogin>
           <h2>Fazer login</h2>
-          <a href="/">Criar conta</a>
         </HeaderLogin>
 
         <InputSign name="E-mail" label="E-mail" />
@@ -38,6 +38,17 @@ const SignIn: React.FC = () => {
         
         <button type="button">Entrar</button>
       </InputLogin>
+
+      <InputRegister>
+        <div className="register">
+          <span>Não tem conta?</span>
+          <a href="/">Cadastre-se</a>
+        </div>
+        <div>
+          <span>É de graça </span>
+          <img src={purpleHeart} alt="purple heart"/>
+        </div>
+      </InputRegister>
     </PageSignIn>
   )
 }
