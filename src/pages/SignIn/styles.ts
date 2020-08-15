@@ -13,8 +13,17 @@ export const PageSignIn = styled.div`
     flex-direction: row;
 
     input {
-      width: 400px;
+      width: 350px;
     }
+  }
+`;
+
+export const SignInPage = styled.div`
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
   }
 `;
 
@@ -40,12 +49,6 @@ export const HeaderLogin = styled.header`
 
   @media (min-width: 1024px) {
     padding: 3rem 0;
-
-    a {
-      position: absolute;
-      bottom: 50px;
-      font-weight: bold;
-    }
   }
 `;
 
@@ -68,7 +71,7 @@ export const Container = styled.div`
   }
 
   @media (min-width: 1024px) {
-    width: 768px;
+    width: 50vw;
     height: 100vh;
 
     img {
@@ -76,10 +79,6 @@ export const Container = styled.div`
     }
 
     > div {
-      width: 50%;
-      margin-left: 24%;
-      margin-top: -180px;
-
       h2 {
         max-width: 320px;
       }
@@ -109,8 +108,6 @@ export const InputLogin = styled.section`
   }
 
   @media (min-width: 1024px) {
-    margin: 130px auto 0;
-
     label {
       left: 25px;
     }
@@ -135,8 +132,8 @@ export const InputConfigs = styled.footer`
     
     input {
       margin-right: 0.6rem;
-      width: 20px;
-      height: 20px;
+      width: 17px;
+      height: 17px;
     }
   }
 
@@ -175,5 +172,10 @@ export const InputRegister = styled.footer`
         color: var(--color-primary-dark);
       }
     }
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0;
+    margin: 9rem 0 -9rem;
   }
 `;
