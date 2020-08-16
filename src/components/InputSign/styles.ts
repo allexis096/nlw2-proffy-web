@@ -7,17 +7,17 @@ export const InputBlock = styled.div`
   flex-direction: column;
 
   & + div {
-    margin-top: 1.4rem;
+    margin-top: 1.40rem;
   }
 
   label {
     color: var(--color-text-complement);
     position: absolute;
     left: 50px;
-    top: 3px;
     font-size: 1.6rem;
+    transition: 0.3s ease all;
   }
-
+  
   input {
     width: 90%;
     height: 5.6rem;
@@ -31,8 +31,14 @@ export const InputBlock = styled.div`
     padding: 0 1.6rem;
     font: 1.6rem Archivo;
   }
+
+  input:focus ~ label {
+    left: 40px;
+    top: -15px;
+    font-size: 1.4rem;
+  }
   
-  :focus-within::after {
+  /* :focus-within::after {
     transform: rotate(90deg);
     width: calc(100% - 54rem);
     height: 2px;
@@ -41,5 +47,5 @@ export const InputBlock = styled.div`
     position: absolute;
     left: 15px;
     top: 12px;
-  }
+  } */
 `;
