@@ -112,6 +112,11 @@ export const InputLogin = styled.section`
       left: 25px;
     }
 
+    input:focus ~ label,
+    input:not(:focus):valid ~ label {
+      left: 20px;
+    }
+
     button {
       width: 100%;
     }

@@ -32,7 +32,8 @@ export const InputBlock = styled.div`
     font: 1.6rem Archivo;
   }
 
-  input:focus ~ label {
+  input:focus ~ label,
+  input:not(:focus):valid ~ label {
     left: 40px;
     top: -15px;
     font-size: 1.4rem;
