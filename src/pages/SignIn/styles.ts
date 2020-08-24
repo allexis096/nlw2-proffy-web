@@ -19,6 +19,10 @@ export const PageSignIn = styled.div`
 `;
 
 export const SignInPage = styled.div`
+  .togglePassword {
+    display: absolute;
+  }
+
   @media (min-width: 1024px) {
     display: flex;
     flex-direction: column;

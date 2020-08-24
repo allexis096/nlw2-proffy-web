@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import LogoContainer from '../../components/LogoContainer';
-
 import InputSign from '../../components/InputSign';
 
 import purpleHeart from '../../assets/images/icons/purple-heart.svg'
+import { MdVisibility, MdVisibilityOff } from 'react-icons/md';
 
 import { 
   Container, 
@@ -16,6 +16,12 @@ import {
   SignInPage } from './styles';
 
 const SignIn: React.FC = () => {
+  const [passShown, setPassShown] = useState(false);
+
+  function togglePasswordShown() {
+    setPassShown(passShown ? false : true);
+  }
+
   return (
     <PageSignIn>
 
@@ -30,7 +36,13 @@ const SignIn: React.FC = () => {
           </HeaderLogin>
 
           <InputSign name="E-mail" label="E-mail" />
-          <InputSign name="Senha" label="Senha" />
+          <InputSign name="Senha" label="Senha" type={passShown ? 'text': 'password' } />
+          <span className="togglePassword" onClick={togglePasswordShown}>
+            {passShown 
+              ? <MdVisibilityOff size={20} />
+              : <MdVisibility size={20} />
+            }
+          </span>
 
           <InputConfigs>
             <div>
