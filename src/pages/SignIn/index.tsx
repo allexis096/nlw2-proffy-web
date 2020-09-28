@@ -58,7 +58,7 @@ const SignIn: React.FC = () => {
         <InputRegister>
           <div className="register">
             <span>Não tem conta?</span>
-            <a href="/">Cadastre-se</a>
+            <a href="/signup">Cadastre-se</a>
           </div>
           <div>
             <span>É de graça </span>
