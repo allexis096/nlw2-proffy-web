@@ -19,10 +19,6 @@ export const PageSignIn = styled.div`
 `;
 
 export const SignInPage = styled.div`
-  .togglePassword {
-    display: absolute;
-  }
-
   @media (min-width: 1024px) {
     display: flex;
     flex-direction: column;
@@ -91,6 +87,12 @@ export const Container = styled.div`
 `;
 
 export const InputLogin = styled.section`
+  .togglePassword {
+    position: absolute;
+    right: 45px;
+    top: 448px;
+  }
+
   button {
     width: 90%;
     height: 5.6rem;
@@ -112,6 +114,11 @@ export const InputLogin = styled.section`
   }
 
   @media (min-width: 1024px) {
+    .togglePassword {
+      top: 312px;
+      right: 220px;
+    }
+    
     label {
       left: 25px;
     }

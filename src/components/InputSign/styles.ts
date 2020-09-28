@@ -14,6 +14,7 @@ export const InputBlock = styled.div`
     color: var(--color-text-complement);
     position: absolute;
     left: 50px;
+    top: 4px;
     font-size: 1.6rem;
     transition: 0.3s ease all;
   }
@@ -28,7 +29,7 @@ export const InputBlock = styled.div`
     background: var(--color-input-background);
     border: 1px solid var(--color-line-in-white);
     outline: 0;
-    padding: 0 1.6rem;
+    padding: 1rem 3.6rem 0 1.6rem;
     font: 1.6rem Archivo;
     color: var(--color-text-base);
   }
@@ -36,18 +37,29 @@ export const InputBlock = styled.div`
   input:focus ~ label,
   input:not(:focus):valid ~ label {
     left: 40px;
-    top: -15px;
+    top: -12px;
     font-size: 1.4rem;
   }
   
-  /* :focus-within::after {
+  :focus-within::after {
     transform: rotate(90deg);
     width: calc(100% - 54rem);
     height: 2px;
     content: '';
     background: var(--color-primary-light);
     position: absolute;
-    left: 15px;
+    left: 12px;
     top: 12px;
-  } */
+  }
+
+  @media (min-width: 1024px) {
+      :focus-within::after {
+      width: calc(100% - 31rem);
+      height: 2px;
+      content: '';
+      background: var(--color-primary-light);
+      position: absolute;
+      left: -1.8rem;
+    }
+  }
 `;

@@ -16,7 +16,7 @@ import {
   SignInPage } from './styles';
 
 const SignIn: React.FC = () => {
-  const [passShown, setPassShown] = useState(false);
+  const [passShown, setPassShown] = useState(true);
 
   function togglePasswordShown() {
     setPassShown(passShown ? false : true);
@@ -35,8 +35,8 @@ const SignIn: React.FC = () => {
             <h2>Fazer login</h2>
           </HeaderLogin>
 
-          <InputSign name="E-mail" label="E-mail" />
-          <InputSign name="Senha" label="Senha" type={passShown ? 'text': 'password' } />
+          <InputSign name="email" label="E-mail" />
+          <InputSign name="senha" label="Senha" type={passShown ? 'password': 'text' } />
           <span className="togglePassword" onClick={togglePasswordShown}>
             {passShown 
               ? <MdVisibilityOff size={20} />
